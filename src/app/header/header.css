@@ -1,4 +1,22 @@
 Header{
     padding:10px;
-    box-shadow: 0 0 10px black;
+    display: flex;
+    justify-content: end;
+    margin: 10px;
+}
+
+Header h1{
+    margin-right: 50px;
+}
+
+#searchBtn{
+    background-color: tan;
+    border: none;
+    margin: 10px;
+    width: 30px;
+    height: 30px;
+}
+
+#searchBtn:hover{
+    color: white;
 }
