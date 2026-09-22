@@ -1,0 +1,18 @@
+.card{
+    margin: 50px;
+    padding: 20px;
+}
+.titleSection{ 
+    display: flex;
+    justify-content: end;
+}
+
+.timeSection{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.prepSection{
+    display: flex;
+    justify-content: space-around;
+}
