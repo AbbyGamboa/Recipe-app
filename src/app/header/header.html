@@ -1,11 +1,10 @@
 <Header>
 	<h1>CookBook</h1>
 	
-	<div>
+	<form (submit.prevent)="onSubmit($event)">
 		<input type="text" placeholder="Search By Tag">
-		<button (click)="logConsole()" id="searchBtn">
-			<i class="fa-solid fa-magnifying-glass" ></i>
+		<button type="form" id="searchBtn">
+			<i class="fa-solid fa-magnifying-glass"></i>
 		</button>
-		
-	</div>
+	</form>
 </Header>

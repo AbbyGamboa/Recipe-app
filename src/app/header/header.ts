@@ -10,4 +10,8 @@ export class Header {
   logConsole(){
     console.log("Search")
   }
+
+  onSubmit(event:Event){
+    console.log("Submitted")
+  }
 }
