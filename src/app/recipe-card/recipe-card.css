@@ -1,9 +1,8 @@
 .container{
-    border: thin solid black;
+
     border-radius: 30px;
     margin: 50px;
     display: flex;
-    padding: 20px;
     justify-content: space-around;
 }
 
@@ -11,7 +10,6 @@
     background-color: orange;
     width: 50%;
     margin: 10px;
-
 }
 
 .recipe{
