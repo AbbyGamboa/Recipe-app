@@ -9,4 +9,13 @@ import { Recipe } from '../recipe.type';
 })
 export class RecipeCard {
   recipe = input.required<Recipe>();
+
+  getRatingStars(rating:number){
+    return Array(Math.floor(rating));
+  }
+
+  halfStar(rating:number){
+    return rating - Math.floor(rating);
+  }
+
 }

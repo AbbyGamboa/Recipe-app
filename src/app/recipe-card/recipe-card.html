@@ -1,32 +1,42 @@
 <div class="container">
 	<img src="{{recipe().image}}" alt="" id="foodImage">
-
+	
 	<div class="recipe">
 		<h3>{{recipe().name}}</h3>
+		<div class="tags">
+			@for (item of recipe().tags; track $index) {
+				<p class="tagItem">{{item}}</p>
+			}
+		</div>
+		
+		<div class="ratingSection">
+			<div>
+				@for (item of getRatingStars(recipe().rating); track $index) {
+				<i class="fa-solid fa-star"></i>
+				}
+				@if(halfStar(recipe().rating) >= .5){
+					<i class="fa-solid fa-star-half-stroke"></i>
+				}
+			</div>
+			
+
+			<div>
+				<p>{{recipe().rating}} of 5</p>
+			</div>
+
+		</div>
+		
 		<div class="timeSection">
-			<p>Prep:{{recipe().prepTimeMinutes}} </p>
-			<p>Cook: {{recipe().cookTimeMinutes}}</p>
-			<p>Total: {{recipe().prepTimeMinutes + recipe().cookTimeMinutes}}</p>
+				<p>{{recipe().prepTimeMinutes + recipe().cookTimeMinutes}}<br>MINS</p>
+				<div class="line"></div>
+				<p>{{recipe().caloriesPerServing}}<br>CALS</p>
+				<div class="line"></div>
+				<p>{{recipe().servings}}<br>SERVES</p>
+			
 		</div>
 		<hr>
 
-		<div class="ingredientSection">
-			<h4>Ingredients</h4>
-			<ul class="ingredients">
-				@for(ingredient of recipe().ingredients; track $index){
-					<li>{{ingredient}}</li>
-				}
-			</ul>
-		</div>
-
-		<div class="instructionSection">
-			<h4>Instructions</h4>
-			<ul class="instructions">
-				@for(instruction of recipe().instructions; track $index){
-					<li>{{instruction}}</li>
-				}
-			</ul>
-		</div>
+		<button class="btn tanish">Checkout Full Recipe</button>
 		
 		
 	</div>
