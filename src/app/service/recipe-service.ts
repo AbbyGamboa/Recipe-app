@@ -9,6 +9,6 @@ export class RecipeService {
   http = inject(HttpClient);
   getRecipesFromApi(){
     const url = `https://dummyjson.com/recipes`;
-    return this.http.get<Array<Recipe>>(url);
+    return this.http.get<any>(url);
   }
 }

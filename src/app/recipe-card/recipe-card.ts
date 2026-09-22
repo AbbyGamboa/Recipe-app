@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
+import { Recipe } from '../recipe.type';
 
 @Component({
   selector: 'app-recipe-card',
@@ -6,4 +7,6 @@ import { Component } from '@angular/core';
   templateUrl: './recipe-card.html',
   styleUrl: './recipe-card.css',
 })
-export class RecipeCard {}
+export class RecipeCard {
+  recipe = input.required<Recipe>();
+}
