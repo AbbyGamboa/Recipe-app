@@ -1,18 +1,25 @@
-.card{
+.container{
+    border: thin solid black;
+    border-radius: 30px;
     margin: 50px;
-    padding: 20px;
-}
-.titleSection{ 
     display: flex;
-    justify-content: end;
+    padding: 20px;
+    justify-content: space-around;
+}
+
+#foodImage{
+    background-color: orange;
+    width: 50%;
+    margin: 10px;
+
+}
+
+.recipe{
+    width: 50%;
 }
 
 .timeSection{
     display: flex;
-    justify-content: space-evenly;
-}
-
-.prepSection{
-    display: flex;
     justify-content: space-around;
 }
+
