@@ -11,7 +11,10 @@ export class Header {
     console.log("Search")
   }
 
-  onSubmit(event:Event){
-    console.log("Submitted")
+  handleSubmit(event:Event){
+    event.preventDefault();
+  
+
+    console.log("form submitted");
   }
 }

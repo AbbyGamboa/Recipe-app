@@ -1,9 +1,9 @@
 <Header>
 	<h1>CookBook</h1>
 	
-	<form (submit.prevent)="onSubmit($event)">
-		<input type="text" placeholder="Search By Tag">
-		<button type="form" id="searchBtn">
+	<form (submit)="handleSubmit($event)">
+		<input type="text" placeholder="Search By Tag" id="tag" required>
+		<button type="submit" id="searchBtn">
 			<i class="fa-solid fa-magnifying-glass"></i>
 		</button>
 	</form>
