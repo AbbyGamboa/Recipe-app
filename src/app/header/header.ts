@@ -1,20 +1,20 @@
-import { Component } from '@angular/core';
+import { Component, output} from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-header',
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './header.html',
   styleUrl: './header.css',
 })
 export class Header {
-  logConsole(){
-    console.log("Search")
-  }
+  search = output<string>();
 
   handleSubmit(event:Event){
     event.preventDefault();
-  
+    
+    const input = (event.target as HTMLFormElement).querySelector('#tag') as HTMLInputElement;
 
-    console.log("form submitted");
+    this.search.emit(input.value);
   }
 }

@@ -10,5 +10,7 @@ import { RecipeList } from './recipe-list/recipe-list';
   styleUrl: './app.css'
 })
 export class App {
+  searchTag = '';
+  
   protected readonly title = signal('mock-recipe');
 }

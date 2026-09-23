@@ -1,4 +1,4 @@
-@for (recipe of recipeList(); track recipe.id) {
+@for (recipe of recipeList()| findByTag:searchTag(); track recipe.id) {
 	<app-recipe-card [recipe]="recipe"></app-recipe-card>
 }
 	
