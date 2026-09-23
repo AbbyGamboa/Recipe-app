@@ -9,6 +9,9 @@ import { FormsModule } from '@angular/forms';
 })
 export class Header {
   search = output<string>();
+  reset(event:Event){
+    this.search.emit("");
+  }
 
   handleSubmit(event:Event){
     event.preventDefault();
