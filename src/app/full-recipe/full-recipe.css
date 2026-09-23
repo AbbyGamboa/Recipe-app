@@ -1,0 +1,41 @@
+.recipeContainer{
+    width: 100%;
+    margin: 30px;
+    padding: 20px;
+}
+
+.interactSection{
+    display: flex;
+}
+
+.rating{
+    display: flex;
+}
+
+.line{
+    border: thin solid black;
+    margin: 10px
+}
+
+.bottomSection{
+    margin: 10px;
+    width: 90%;
+    border-left: thin solid black;
+    border-right: thin solid black;
+    border-bottom: thin solid black;
+    border-radius: 25px;
+
+}
+
+.prepSection{
+    display: flex;
+    justify-content: space-around;
+}
+
+.decorator{
+    background-color: green;
+    width: 100%;
+    height: 20px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
