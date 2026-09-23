@@ -19,3 +19,11 @@
     justify-content: baseline;
     padding-left:80px;
 }
+#img{
+    width: 50%;
+}
+.noResponse{
+    margin: 80px;
+    display: flex;
+    justify-content: space-between;
+}

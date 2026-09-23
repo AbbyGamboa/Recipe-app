@@ -10,5 +10,8 @@
 }
 
 @if((recipeList()|findByTag:searchTag()).length == 0){
-	<h1>No recipes found</h1>
+	<div class="noResponse">
+		<img src="/images/emptyPlate.jpg" alt="emptyPlate" id="img">
+		<h1>No Recipes Found</h1>
+	</div>
 }
