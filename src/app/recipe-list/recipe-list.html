@@ -1,6 +1,5 @@
 <div class="openingTitle">
-	<h1 id="title">
-		{{!searchTag() ? "All": ""}} Recipes: </h1>
+	<h1 id="title">{{!searchTag() ? "All": ""}} Recipes: </h1>
 	@if(searchTag()){
 		<p id="tagType">{{searchTag()}}</p>
 	}
@@ -9,6 +8,7 @@
 @for (recipe of recipeList()| findByTag:searchTag(); track recipe.id) {
 	<app-recipe-card [recipe]="recipe"></app-recipe-card>
 }
-	
 
-
+@if((recipeList()|findByTag:searchTag()).length == 0){
+	<h1>No recipes found</h1>
+}
