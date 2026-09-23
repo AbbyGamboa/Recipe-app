@@ -9,7 +9,7 @@ import { FormsModule } from '@angular/forms';
 })
 export class Header {
   search = output<string>();
-  reset(event:Event){
+  reset(){
     this.search.emit("");
   }
 
