@@ -15,15 +15,19 @@
 }
 
 .openingTitle{
+    
     display: flex;
     justify-content: baseline;
     padding-left:80px;
 }
 #img{
     width: 50%;
+    margin: 10px;
 }
 .noResponse{
-    margin: 80px;
+    margin: 50px;
+    padding: 20px;
+
     display: flex;
     justify-content: space-between;
 }
