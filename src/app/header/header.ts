@@ -1,5 +1,7 @@
-import { Component, input, output} from '@angular/core';
+import { Component, output} from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-header',
@@ -9,16 +11,16 @@ import { FormsModule } from '@angular/forms';
 })
 export class Header {
   search = output<string>();
+  constructor(private router: Router){}
+
   reset(){
-  
-    this.search.emit("");
+    this.router.navigate(['']);
   }
 
   handleSubmit(event:Event){
     event.preventDefault();
-    
-    const input = (event.target as HTMLFormElement).querySelector('#tag') as HTMLInputElement;
+    const tag = (event.target as HTMLFormElement).querySelector('#tag') as HTMLInputElement;
 
-    this.search.emit(input.value);
+    this.router.navigate(['/recipes/tag/', tag.value])
   }
 }

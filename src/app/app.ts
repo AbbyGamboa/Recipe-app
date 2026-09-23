@@ -5,7 +5,7 @@ import { RecipeList } from './recipe-list/recipe-list';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Header, RecipeList],
+  imports: [RouterOutlet, Header],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
