@@ -1,4 +1,11 @@
-<h1 id="title">Recipes: {{searchTag()? searchTag():"All"}}</h1>
+<div class="openingTitle">
+	<h1 id="title">
+		{{!searchTag() ? "All": ""}} Recipes: </h1>
+	@if(searchTag()){
+		<p id="tagType">{{searchTag()}}</p>
+	}
+</div>
+
 @for (recipe of recipeList()| findByTag:searchTag(); track recipe.id) {
 	<app-recipe-card [recipe]="recipe"></app-recipe-card>
 }
