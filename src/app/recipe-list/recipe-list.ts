@@ -4,6 +4,7 @@ import { RecipeService } from '../service/recipe-service';
 import { Recipe } from '../recipe.type';
 import { catchError } from 'rxjs';
 import { FindByTagPipe } from '../pipe/find-by-tag-pipe';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-recipe-list',
@@ -13,22 +14,22 @@ import { FindByTagPipe } from '../pipe/find-by-tag-pipe';
 })
 export class RecipeList implements OnInit{
   recipeService = inject(RecipeService);
+  route = inject(ActivatedRoute)
   recipeList= signal<Array<Recipe>>([]);
-  searchTag = input('');
+  searchTag = '';
 
   ngOnInit(): void {
-    this.recipeService
-    .getRecipesFromApi()
-    .pipe(catchError(
-      (error) => {
-        console.log(error);
-        throw error;
-      }
-    ))
-    .subscribe((data)=>{
-      this.recipeList.set(data.recipes);
-    });
-
-    console.log(this.recipeList);
+    this.route.paramMap.subscribe(params => {
+      this.searchTag = params.get('tag') ?? '';
+      this.recipeService.getRecipesFromApi().pipe(catchError(
+        (error) => {
+          console.log(error);
+          throw error;
+        }
+      )).subscribe((data)=>{
+        this.recipeList.set(data.recipes);
+      });
+    })
+    
   }
 }

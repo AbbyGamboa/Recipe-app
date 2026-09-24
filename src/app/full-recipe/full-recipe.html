@@ -1,0 +1,69 @@
+
+<div class="recipeContainer">
+	<h2><b>{{recipe().name}}</b></h2>
+	<div class="interactSection">
+		<div class="rating">
+			@for (item of getRatingStars(recipe().rating); track $index) {
+			<i class="fa-solid fa-star"></i>
+			}
+			@if(halfStar(recipe().rating) >= .5){
+				<i class="fa-solid fa-star-half-stroke"></i>
+			}
+			<p>{{recipe().rating}}</p>
+		</div>
+
+		<div class="line"></div>
+
+		<div>
+			<p>{{recipe().reviewCount}} Reviews</p>
+		</div>
+	</div>
+
+	<div class="imgContainer">
+		<img src="{{recipe().image}}" alt="" >
+	</div>
+	
+	<div class="prepSection">
+		<div>
+			<p>Prep Time</p>
+			<p>{{recipe().prepTimeMinutes}}</p>
+		</div>
+
+		<div class="line"></div>
+		
+		<div>
+			<p>Cook Time</p>
+			<p>{{recipe().cookTimeMinutes}}</p>
+		</div>
+		<div class="line"></div>
+		
+		<div>
+			<p>Serves:</p>
+			<p>{{recipe().servings}} People</p>
+		</div>
+		
+		<div class="line"></div>
+		<app-level-output [difficulty]="recipe().difficulty"></app-level-output>
+	</div>
+
+	<div class="ingAndDirect">
+		<div>
+			<h4>Ingredients:</h4>
+			<ul>
+				@for(ingredient of recipe().ingredients; track $index){
+					<li>{{ingredient}}</li>
+				}
+			</ul>
+		</div>
+
+		<div>
+			<h4>Directions:</h4>
+			<ol>
+				@for(instruction of recipe().instructions; track $index){
+					<li>{{instruction}}</li>
+				}
+			</ol>
+
+		</div>
+	</div>
+</div>

@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { inject, Injectable } from '@angular/core';
+import { inject, Injectable, input, signal, output} from '@angular/core';
 import { Recipe } from '../recipe.type';
 
 @Injectable({
@@ -10,5 +10,10 @@ export class RecipeService {
   getRecipesFromApi(){
     const url = `https://dummyjson.com/recipes`;
     return this.http.get<any>(url);
+  }
+
+  getSingleRecipe(id:Number){
+    const url = `https://dummyjson.com/recipes/`+id;
+    return this.http.get<Recipe>(url);
   }
 }

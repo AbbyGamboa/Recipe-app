@@ -9,6 +9,10 @@ Header h1{
     margin-right: 50px;
 }
 
+#homeBtn:hover{
+    text-shadow: 0 0 5px grey;
+}
+
 #searchBtn{
     background-color: tan;
     border: none;

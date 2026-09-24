@@ -1,5 +1,6 @@
-import { Component, input } from '@angular/core';
+import { Component, input, output, signal } from '@angular/core';
 import { Recipe } from '../recipe.type';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-recipe-card',
@@ -10,6 +11,8 @@ import { Recipe } from '../recipe.type';
 export class RecipeCard {
   recipe = input.required<Recipe>();
 
+  constructor(private router: Router){}
+
   getRatingStars(rating:number){
     return Array(Math.floor(rating));
   }
@@ -18,4 +21,7 @@ export class RecipeCard {
     return rating - Math.floor(rating);
   }
 
+  routRecipe(recipe: Recipe){
+    this.router.navigate(['/recipes/', recipe.id])
+  }
 }

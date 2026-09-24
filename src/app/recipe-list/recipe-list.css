@@ -1,0 +1,33 @@
+#title{
+    align-self: flex-end;
+}
+
+#tagType{
+     border: thin solid tan;
+    color: tan;
+    margin: 5px;
+    padding: 3px;
+    width: 100px;
+    height: 35px;
+    text-align: center;
+    border-radius: 30px;
+    align-self: flex-end;
+}
+
+.openingTitle{
+    
+    display: flex;
+    justify-content: baseline;
+    padding-left:80px;
+}
+#img{
+    width: 50%;
+    margin: 10px;
+}
+.noResponse{
+    margin: 50px;
+    padding: 20px;
+
+    display: flex;
+    justify-content: space-between;
+}

@@ -1,6 +1,17 @@
-@for (recipe of recipeList()| findByTag:searchTag(); track recipe.id) {
+<div class="openingTitle">
+	<h1 id="title">{{!searchTag ? "All": ""}} Recipes: </h1>
+	@if(searchTag){
+		<p id="tagType">{{searchTag}}</p>
+	}
+</div>
+
+@for (recipe of recipeList()| findByTag:searchTag; track recipe.id) {
 	<app-recipe-card [recipe]="recipe"></app-recipe-card>
 }
-	
 
-
+@if((recipeList()|findByTag:searchTag).length == 0){
+	<div class="noResponse">
+		<img src="/images/emptyPlate.jpg" alt="emptyPlate" id="img">
+		<h1>No Recipes Found</h1>
+	</div>
+}
