@@ -3,10 +3,11 @@ import { ActivatedRoute } from '@angular/router';
 import { Recipe } from '../recipe.type';
 import { RecipeService } from '../service/recipe-service';
 import { catchError } from 'rxjs';
+import { LevelOutput } from '../level-output/level-output';
 
 @Component({
   selector: 'app-full-recipe',
-  imports: [],
+  imports: [LevelOutput],
   templateUrl: './full-recipe.html',
   styleUrl: './full-recipe.css',
 })
