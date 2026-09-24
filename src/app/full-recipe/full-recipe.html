@@ -1,10 +1,5 @@
 
 <div class="recipeContainer">
-	<div class="imgContainer">
-		<img src="{{recipe().image}}" alt="" >
-	</div>
-	
-	
 	<h2><b>{{recipe().name}}</b></h2>
 	<div class="interactSection">
 		<div class="rating">
@@ -24,10 +19,29 @@
 		</div>
 	</div>
 
-	<div class="bottomSection">
-		<div class="decorator"></div>
-		
+	<div class="imgContainer">
+		<img src="{{recipe().image}}" alt="" >
+	</div>
+	
+	<div class="prepSection">
+		<div>
+			<p>Prep Time</p>
+			<p>{{recipe().prepTimeMinutes}}</p>
+		</div>
 
+		<div class="line"></div>
+		
+		<div>
+			<p>Cook Time</p>
+			<p>{{recipe().cookTimeMinutes}}</p>
+		</div>
+		<div class="line"></div>
+		
+		<div>
+			<p>Serves:</p>
+			<p>{{recipe().servings}} People</p>
+		</div>
+		
 	</div>
 
 	<div>
