@@ -55,3 +55,27 @@
     width: 100%;
 }
 
+.ingAndDirect{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+ul li{
+    padding: 0 30px;
+    margin: 10px;
+    list-style: none;
+    background-size: 20px;
+    background-image: url(/images/circle-outline.svg);
+    background-repeat: no-repeat;
+    background-size: 20px;
+}
+
+ol li{
+    padding: 0 30px;
+}
+ol li::before{
+    
+    background-color: red;
+    border-radius: 50%;
+}

@@ -44,25 +44,24 @@
 		
 	</div>
 
-	<div>
-		<h4>Ingredients:</h4>
-		<ul>
-			@for(ingredient of recipe().ingredients; track $index){
-				<li>{{ingredient}}</li>
-			}
-		</ul>
-	</div>
-	<div>
-		<h4>Dirctions:</h4>
-		<ol>
-			@for(instruction of recipe().instructions; track $index){
-				<li>{{instruction}}</li>
-			}
-		</ol>
+	<div class="ingAndDirect">
+		<div>
+			<h4>Ingredients:</h4>
+			<ul>
+				@for(ingredient of recipe().ingredients; track $index){
+					<li>{{ingredient}}</li>
+				}
+			</ul>
+		</div>
 
-	</div>
-			
+		<div>
+			<h4>Directions:</h4>
+			<ol>
+				@for(instruction of recipe().instructions; track $index){
+					<li>{{instruction}}</li>
+				}
+			</ol>
 
-	
-	
+		</div>
+	</div>
 </div>
