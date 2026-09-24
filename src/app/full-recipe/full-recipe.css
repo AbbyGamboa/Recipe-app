@@ -39,3 +39,17 @@
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
 }
+
+.imgContainer{
+    width: 95%;
+    height: 300px;
+    overflow: hidden;
+
+}
+
+.imgContainer img{
+    object-fit: cover;
+    height: 300px;
+    width: 100%;
+}
+
